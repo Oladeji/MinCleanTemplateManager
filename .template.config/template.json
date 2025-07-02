@@ -2,10 +2,10 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Oladeji Akomolafe",
   "classifications": [ "Solution" ],
-  "name": "Akoms Clean Arch Solution",
-  "shortName": "akomscleansolution",
-  "defaultName": "AkomsCleanArch.Templates.Sol",
-  "identity": "AkomsCleanArch.Templates.Sol",
+  "name": "Akoms Min Clean Arch Solution",
+  "shortName": "akomsmincleansolution",
+  "defaultName": "AkomsMinCleanArch.Templates.Sol",
+  "identity": "AkomsMinCleanArch.Templates.Sol",
   "tags": {
     "language": "C#",
     "type": "solution"
@@ -13,8 +13,8 @@
   "sourceName": "MinCleanTemplateManager",
   "preferNameDirectory": true,
   "guids": [
-    "0E62310C-D76A-4681-9926-B1BFFDC379FC",
-    "032123E7-E4E0-4B17-9564-ECA4B57F30B7"
+    "0E62310C-D76A-4681-9926-B1BFFDC379FB",
+    "032123E7-E4E0-4B17-9564-ECA4B57F30B8"
   ],
   "symbols": {
     "Framework": {
@@ -135,28 +135,27 @@
   },
   "sources": [
     {
+      "source": "./",
+      "target": "./",
+      "condition": "(!IncludeGitFolder)",
+      "exclude": [
+        ".git/**",
+        ".gitignore",
+        "src/.git",
+        "src/.gitignore",
+        ".vs/**",
+        ".template.config/**",
+        ".template.config\template.json",
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        ".template.config/**/*",
+        "**/*.filelist",
+        "**/*.user",
+        "**/*.lock.json"
+
+
+      ],
       "modifiers": [
-        {
-          "source": "./",
-          "target": "./",
-          "condition": "(!IncludeGitFolder)",
-          "exclude": [
-            ".git/**",
-            ".gitignore",
-            "src/.git",
-            "src/.gitignore",
-            ".vs/**",
-            ".template.config/**",
-            ".template.config\template.json",
-            "**/[Bb]in/**",
-            "**/[Oo]bj/**",
-            ".template.config/**/*",
-            "**/*.filelist",
-            "**/*.user",
-            "**/*.lock.json"
-
-
-          ],
           {
             "condition": "(DatabaseProvider == 'MySQL')",
             "replace": {
@@ -185,7 +184,5 @@
           }
       ]
     }
-  ]
-}
   ]
 }

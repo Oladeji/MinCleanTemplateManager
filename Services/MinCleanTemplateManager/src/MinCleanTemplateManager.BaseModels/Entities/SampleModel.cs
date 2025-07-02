@@ -1,7 +1,7 @@
 ﻿using CodeGeneratorAttributesLibrary;
 using DomainBase;
 
-namespace NewTemplateManager.BaseModels.Entities
+namespace MinCleanTemplateManager.BaseModels.Entities
 {
 
     public class SampleModel : BaseEntity

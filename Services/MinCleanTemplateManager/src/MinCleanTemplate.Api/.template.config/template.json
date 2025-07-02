@@ -5,20 +5,20 @@
     "Web",
     "Web API"
   ],
-  "name": "Akoms.CleanWebApi",
+  "name": "Akoms.MinCleanWebApi",
   "description": "A clean Web API project",
   "tags": {
     "language": "C#",
     "platform": ".NET",
     "type": "project"
   },
-  "defaultName": "AkomsCleanArch.Templates.Api",
-  "identity": "AkomsCleanArch.Templates.Api",
-  "groupIdentity": "CleanArch.Templates",
-  "shortName": "akomscleanwebapi",
+  "defaultName": "AkomsMinCleanArch.Templates.Api",
+  "identity": "AkomsMinCleanArch.Templates.Api",
+  "groupIdentity": "CleanMinArch.Templates",
+  "shortName": "akomsmincleanwebapi",
   "sourceName": "MinCleanTemplateManager.Api",
   "guids": {
-    "project": "b0c0e2a0-0b0a-4e1e-8b0a-0b0a0b0a0b0a"
+    "project": "b0c0e2a0-0b0a-4e1e-8b0a-0b0a0b0a0b01"
   },
   "preferNameDirectory": true,
   "symbols": {
