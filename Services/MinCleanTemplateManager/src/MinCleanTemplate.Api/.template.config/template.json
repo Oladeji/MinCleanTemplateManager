@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Oladeji Akomolafe",
+  "classifications": [
+    "Web",
+    "Web API"
+  ],
+  "name": "Akoms.CleanWebApi",
+  "description": "A clean Web API project",
+  "tags": {
+    "language": "C#",
+    "platform": ".NET",
+    "type": "project"
+  },
+  "defaultName": "AkomsCleanArch.Templates.Api",
+  "identity": "AkomsCleanArch.Templates.Api",
+  "groupIdentity": "CleanArch.Templates",
+  "shortName": "akomscleanwebapi",
+  "sourceName": "MinCleanTemplateManager.Api",
+  "guids": {
+    "project": "b0c0e2a0-0b0a-4e1e-8b0a-0b0a0b0a0b0a"
+  },
+  "preferNameDirectory": true,
+  "symbols": {
+    "solutionName": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "SolutionName",
+      "description": "The name of the solution"
+    },
+    "projectName": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "ProjectName",
+      "description": "The name of the project"
+    }
+
+  }
+}

@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.6" />
+
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0-preview.2.efcore.9.0.0" />
+  </ItemGroup>
+
+	<ItemGroup Condition="'$(UseMySql)' == 'true'">
+		<PackageReference Include="MySqlConnector" Version="2.4.0" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0-preview.2.efcore.9.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(UseSqlServer)' == 'true'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.6" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(UsePostgreSql)' == 'true'">
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.0-preview.1" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(UseSqlite)' == 'true'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0-preview.6.24327.4" />
+	</ItemGroup>
+	
+	
+  <ItemGroup>
+    <ProjectReference Include="..\CQRSHelper\CQRSHelper.csproj" />
+    <ProjectReference Include="..\DomainUtils\DomainUtils.csproj" />
+  </ItemGroup>
+
+</Project>

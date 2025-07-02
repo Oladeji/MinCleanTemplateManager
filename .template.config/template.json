@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Oladeji Akomolafe",
+  "classifications": [ "Solution" ],
+  "name": "Akoms Clean Arch Solution",
+  "shortName": "akomscleansolution",
+  "defaultName": "AkomsCleanArch.Templates.Sol",
+  "identity": "AkomsCleanArch.Templates.Sol",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "sourceName": "MinCleanTemplateManager",
+  "preferNameDirectory": true,
+  "guids": [
+    "0E62310C-D76A-4681-9926-B1BFFDC379FC",
+    "032123E7-E4E0-4B17-9564-ECA4B57F30B7"
+  ],
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [
+
+        {
+          "choice": "net8.0",
+          "description": "Target netcoreapp8.0"
+        },
+        {
+          "choice": "net9.0",
+          "description": "Target netcoreapp9.0"
+        },
+        {
+          "choice": "net10.0",
+          "description": "Target netcoreapp10.0"
+        }
+      ],
+      "replaces": "net9.0",
+      "defaultValue": "net9.0"
+    },
+    "HttpPort": {
+      "type": "parameter",
+      "datatype": "integer",
+      "description": "Port number to use for the HTTP endpoint in launchSettings.json."
+    },
+    "HttpPortGenerated": {
+      "type": "generated",
+      "generator": "port"
+      //"low": 44300,
+      //"high": 44399
+    },
+    "HttpPortReplacer": {
+      "type": "generated",
+      "generator": "coalesce",
+      "parameters": {
+        "sourceVariableName": "HttpPort",
+        "fallbackVariableName": "HttpPortGenerated"
+      },
+      "replaces": "33948"
+    },
+    "HttpsPort": {
+      "type": "parameter",
+      "datatype": "integer",
+      "description": "Port number to use for the HTTPS endpoint in launchSettings.json."
+    },
+    "HttpsPortGenerated": {
+      "type": "generated",
+      "generator": "port",
+      "parameters": {
+        "low": 44300,
+        "high": 44399
+      }
+    },
+    "HttpsPortReplacer": {
+      "type": "generated",
+      "generator": "coalesce",
+      "parameters": {
+        "sourceVariableName": "HttpsPort",
+        "fallbackVariableName": "HttpsPortGenerated"
+      },
+      "replaces": "44350"
+    },
+    "EnableSwaggerSupport": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": true,
+      "description": "Enable Swagger UI and Swagger JSON endpoints."
+
+    },
+    "DatabaseProvider": {
+      "type": "parameter",
+      "datatype": "choice",
+      "description": "The database provider to use.",
+      "choices": [
+        {
+          "choice": "MySQL",
+          "description": "Use MySQL as the database provider.",
+          "forms": {
+            "global": [ "UseMySql" ]
+          }
+        },
+        {
+          "choice": "SQLServer",
+          "description": "Use SQL Server as the database provider.",
+          "forms": {
+            "global": [ "UseSqlServer" ]
+          }
+        },
+        {
+          "choice": "PostgreSQL",
+          "description": "Use PostgreSQL as the database provider.",
+          "forms": {
+            "global": [ "UsePostgreSql" ]
+          }
+        },
+        {
+          "choice": "SQLite",
+          "description": "Use SQLite as the database provider.",
+          "forms": {
+            "global": [ "UseSqlite" ]
+          }
+        }
+      ],
+      "defaultValue": "MySQL",
+      "replaces": "DatabaseProvider"
+    },
+    "IncludeGitFolder": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": false,
+      "description": "Include a .gitignore file in the project."
+
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "source": "./",
+          "target": "./",
+          "condition": "(!IncludeGitFolder)",
+          "exclude": [
+            ".git/**",
+            ".gitignore",
+            "src/.git",
+            "src/.gitignore",
+            ".vs/**",
+            ".template.config/**",
+            ".template.config\template.json",
+            "**/[Bb]in/**",
+            "**/[Oo]bj/**",
+            ".template.config/**/*",
+            "**/*.filelist",
+            "**/*.user",
+            "**/*.lock.json"
+
+
+          ],
+          {
+            "condition": "(DatabaseProvider == 'MySQL')",
+            "replace": {
+              "\"#ConnectionString#\"": "\"Server=localhost;Port=3306;Database=YourDb;User=root;Password=your_password;\""
+            }
+          },
+          {
+            "condition": "(DatabaseProvider == 'SQLServer')",
+            "replace": {
+              "\"#ConnectionString#\"": "\"Server=(localdb)\\\\mssqllocaldb;Database=YourDb;Trusted_Connection=True;MultipleActiveResultSets=true\""
+            }
+          },
+          {
+            "condition": "(DatabaseProvider == 'PostgreSQL')",
+            "replace": {
+              "\"#ConnectionString#\"": "\"Host=localhost;Database=YourDb;Username=postgres;Password=your_password\""
+            }
+          },
+          {
+            "condition": "(DatabaseProvider == 'SQLite')",
+            "replace": {
+              "\"#ConnectionString#\"": "\"Data Source=YourDb.db\""
+            }
+
+
+          }
+      ]
+    }
+  ]
+}
+  ]
+}

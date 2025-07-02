@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Info>
+  <LibraryName>NewTemplateManager</LibraryName>
+<OutPutDir>C:\Works\CSharp\NewTemplateManager\src\NewTemplateManager.BaseModels\Automate</OutPutDir>
+	<GeneralInfo>Please Remember to uncheck Include Entity Config Auto CheckBox for RegistrationManager , Configurations are combined in AllEntitiesConfig.cs file</GeneralInfo>
+	<UnCheckcheckBox1></UnCheckcheckBox1>
+	<IdentityDbContextName></IdentityDbContextName>
+</Info>

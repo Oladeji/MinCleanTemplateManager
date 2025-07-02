@@ -1,0 +1,6 @@
+@MinCleanTemplate.Api_HostAddress = http://localhost:5240
+
+GET {{MinCleanTemplate.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
