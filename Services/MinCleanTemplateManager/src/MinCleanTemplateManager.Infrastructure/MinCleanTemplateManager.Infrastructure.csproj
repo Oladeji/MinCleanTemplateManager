@@ -25,25 +25,30 @@
   </ItemGroup>
 
 
-	<ItemGroup Condition="'$(UseMySql)' == 'true'">
+	<!--#if (UseMySql) -->
+	<ItemGroup >
+		
 		<PackageReference Include="MySql.Data.OpenTelemetry" Version="9.3.0" />
 		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0-preview.2.efcore.9.0.0" />
 	</ItemGroup>
-
-	<ItemGroup Condition="'$(UseSqlServer)' == 'true'">
+	<!--#endif -->
+	<!--#if (UseSqlServer) -->
+	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.6" />
 		<PackageReference Include="OpenTelemetry.Instrumentation.SqlClient" Version="1.12.0-beta.1" />
 	</ItemGroup>
-
-	<ItemGroup Condition="'$(UsePostgreSql)' == 'true'">
+	<!--#endif -->
+	<!--#if (UsePostgreSql) -->
+	<ItemGroup >
 		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.0-preview.1" />
 		<PackageReference Include="Npgsql.OpenTelemetry" Version="9.0.0-preview.1" />
 	</ItemGroup>
-
-	<ItemGroup Condition="'$(UseSqlite)' == 'true'">
+	<!--#endif -->
+	<!--#if (UseSqlite) -->
+	<ItemGroup >
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0-preview.6.24327.4" />
 	</ItemGroup>
-
+	<!--#endif -->
   <ItemGroup>
     <ProjectReference Include="..\..\..\SharedLibrary\DomainUtils\DomainUtils.csproj" />
     <ProjectReference Include="..\..\..\SharedLibrary\GlobalConstants\GlobalConstants.csproj" />

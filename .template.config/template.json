@@ -96,92 +96,93 @@
         {
           "choice": "MySQL",
           "description": "Use MySQL as the database provider.",
-          "forms": {
-            "global": [ "UseMySql" ]
-          }
+          "displayName": "My SQL"
+
         },
         {
           "choice": "SQLServer",
           "description": "Use SQL Server as the database provider.",
-          "forms": {
-            "global": [ "UseSqlServer" ]
-          }
+          "displayName": "MS SQL SERVER"
         },
         {
           "choice": "PostgreSQL",
           "description": "Use PostgreSQL as the database provider.",
-          "forms": {
-            "global": [ "UsePostgreSql" ]
-          }
+          "displayName": "POSTGRESS"
+
         },
         {
           "choice": "SQLite",
           "description": "Use SQLite as the database provider.",
-          "forms": {
-            "global": [ "UseSqlite" ]
-          }
+          "displayName": "SQL LITE"
+
         }
       ],
-      "defaultValue": "MySQL",
-      "replaces": "DatabaseProvider"
-    },
-    "IncludeGitFolder": {
-      "type": "parameter",
-      "datatype": "bool",
-      "defaultValue": false,
-      "description": "Include a .gitignore file in the project."
+      "defaultValue": "MySQL"
 
+    },
+    "UseSqlite": {
+      "type": "computed",
+      "value": "(DatabaseProvider==\"SQLite\")"
+    },
+    "UseMySql": {
+      "type": "computed",
+      "value": "(DatabaseProvider==\"MySQL\")"
+    },
+    "UsePostgreSql": {
+      "type": "computed",
+      "value": "(DatabaseProvider==\"PostgreSQL\")"
+    },
+    "UseSqlServer": {
+      "type": "computed",
+      "value": "(DatabaseProvider==\"SQLServer\")"
     }
+
+
   },
   "sources": [
     {
       "source": "./",
       "target": "./",
-      "condition": "(!IncludeGitFolder)",
       "exclude": [
+        ".template.config/**",
         ".git/**",
         ".gitignore",
         "src/.git",
         "src/.gitignore",
         ".vs/**",
-        ".template.config/**",
-        ".template.config\template.json",
         "**/[Bb]in/**",
         "**/[Oo]bj/**",
-        ".template.config/**/*",
         "**/*.filelist",
         "**/*.user",
         "**/*.lock.json"
-
-
       ],
       "modifiers": [
-          {
-            "condition": "(DatabaseProvider == 'MySQL')",
-            "replace": {
-              "\"#ConnectionString#\"": "\"Server=localhost;Port=3306;Database=YourDb;User=root;Password=your_password;\""
-            }
-          },
-          {
-            "condition": "(DatabaseProvider == 'SQLServer')",
-            "replace": {
-              "\"#ConnectionString#\"": "\"Server=(localdb)\\\\mssqllocaldb;Database=YourDb;Trusted_Connection=True;MultipleActiveResultSets=true\""
-            }
-          },
-          {
-            "condition": "(DatabaseProvider == 'PostgreSQL')",
-            "replace": {
-              "\"#ConnectionString#\"": "\"Host=localhost;Database=YourDb;Username=postgres;Password=your_password\""
-            }
-          },
-          {
-            "condition": "(DatabaseProvider == 'SQLite')",
-            "replace": {
-              "\"#ConnectionString#\"": "\"Data Source=YourDb.db\""
-            }
-
-
+        {
+          "condition": "(DatabaseProvider == 'MySQL')",
+          "replace": {
+            "\"#ConnectionString#\"": "\"Server=localhost;Port=3306;Database=YourDb;User=root;Password=your_password;\""
           }
+        },
+        {
+          "condition": "(DatabaseProvider == 'SQLServer')",
+          "replace": {
+            "\"#ConnectionString#\"": "\"Server=(localdb)\\\\mssqllocaldb;Database=YourDb;Trusted_Connection=True;MultipleActiveResultSets=true\""
+          }
+        },
+        {
+          "condition": "(DatabaseProvider == 'PostgreSQL')",
+          "replace": {
+            "\"#ConnectionString#\"": "\"Host=localhost;Database=YourDb;Username=postgres;Password=your_password\""
+          }
+        },
+        {
+          "condition": "(DatabaseProvider == 'SQLite')",
+          "replace": {
+            "\"#ConnectionString#\"": "\"Data Source=YourDb.db\""
+          }
+
+
+        }
       ]
     }
   ]

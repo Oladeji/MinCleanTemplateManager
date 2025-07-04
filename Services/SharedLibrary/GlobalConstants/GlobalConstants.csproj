@@ -13,26 +13,36 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.6" />
 
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0-preview.2.efcore.9.0.0" />
   </ItemGroup>
 
+
+
+	
+	<!--#if (UseMySql) -->
 	<ItemGroup Condition="'$(UseMySql)' == 'true'">
 		<PackageReference Include="MySqlConnector" Version="2.4.0" />
 		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0-preview.2.efcore.9.0.0" />
 	</ItemGroup>
+	<!--#endif -->
 
-	<ItemGroup Condition="'$(UseSqlServer)' == 'true'">
+	<!--#if (UseSqlServer) -->
+	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.6" />
 	</ItemGroup>
-
-	<ItemGroup Condition="'$(UsePostgreSql)' == 'true'">
+	<!--#endif -->
+	
+	<!--#if (UsePostgreSql) -->
+	<ItemGroup>
 		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.0-preview.1" />
 	</ItemGroup>
-
-	<ItemGroup Condition="'$(UseSqlite)' == 'true'">
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0-preview.6.24327.4" />
-	</ItemGroup>
+	<!--#endif -->
 	
+	<!--#if (UseSqlite) -->
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0-preview.6.24327.4" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0-preview.2.efcore.9.0.0" />
+	</ItemGroup>
+	<!--#endif -->
 	
   <ItemGroup>
     <ProjectReference Include="..\CQRSHelper\CQRSHelper.csproj" />
@@ -40,3 +50,4 @@
   </ItemGroup>
 
 </Project>
+

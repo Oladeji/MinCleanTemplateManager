@@ -6,7 +6,7 @@ public static class EndpointRegistration
 {
     public static void RegisterEndpoints(this WebApplication app)
     {
-        //app.MapAutoVerificationEndpoints();
+        app.MapSampleModelEndpoint();
 
       //  app.MapTransmitterModelsEndpoints();
     }

@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include=".template.config\template.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="9.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.6" />
@@ -35,6 +31,10 @@
     <ProjectReference Include="..\..\..\SharedLibrary\GlobalConstants\GlobalConstants\GlobalConstants.csproj" />
     <ProjectReference Include="..\MinCleanTemplateManager.Application\MinCleanTemplateManager.Application.csproj" />
     <ProjectReference Include="..\MinCleanTemplateManager.Infrastructure\MinCleanTemplateManager.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

@@ -30,22 +30,24 @@ namespace MinCleanTemplateManager.Infrastructure
             Console.WriteLine($"Connection String: {constr}");
             var connectionStringProvider = new GlobalConstants.ConnectionStringProvider { ConnectionString = constr };
             services.AddSingleton(connectionStringProvider);
-
-            #if UseSqlServer
-                        services.AddDbContext<MinCleanTemplateManagerContext>(options =>
-                        {
-                            options.UseSqlServer(constr);
-                            options.EnableSensitiveDataLogging();
-                            options.LogTo(Console.WriteLine, LogLevel.Information);
-                        });
-            #elif UsePostgreSql
-                        services.AddDbContext<MinCleanTemplateManagerContext>(options => options.UseNpgsql(constr));
-            #elif UseSqlite
-                        services.AddDbContext<MinCleanTemplateManagerContext>(options => options.UseSqlite(constr));
-            #else // Default to MySQL
-                        services.AddDbContext<MinCleanTemplateManagerContext>(option => option.UseMySql(constr, GeneralUtils.GetMySqlVersion()));
+            #if (UseSqlServer)
+                 services.AddDbContext<MinCleanTemplateManagerContext>(options =>
+                   {
+                      options.UseSqlServer(constr);
+                      options.EnableSensitiveDataLogging();
+                      options.LogTo(Console.WriteLine, LogLevel.Information);
+                    });
             #endif
-
+            #if (UsePostgreSql)
+                services.AddDbContext<MinCleanTemplateManagerContext>(options => options.UseNpgsql(constr));
+                                        
+            #endif
+            #if (UseSqlite)
+                services.AddDbContext<MinCleanTemplateManagerContext>(options => options.UseSqlite(constr));
+            #endif
+            #if (UseMySql)         
+               services.AddDbContext<MinCleanTemplateManagerContext>(option => option.UseMySql(constr, GeneralUtils.GetMySqlVersion()));
+            #endif
 
             RepositoryHelper.RepositoryRegistration.RegisterRepositories(services, applicationAssembly);
 
@@ -83,13 +85,13 @@ namespace MinCleanTemplateManager.Infrastructure
                         .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(serviceName))
                         .AddAspNetCoreInstrumentation()
                         .AddHttpClientInstrumentation()
-                    #if UseSqlServer
-                                            .AddSqlClientInstrumentation()
-                    #elif UsePostgreSql
-                                            .AddNpgsql()
-                    #elif UseMySql
-                                            .AddConnectorNet()
-                    #endif
+                            #if UseSqlServer
+                                                    .AddSqlClientInstrumentation()
+                            #elif UsePostgreSql
+                                                    .AddNpgsql()
+                            #elif UseMySql
+                                                    .AddConnectorNet()
+                            #endif
                                             .AddEntityFrameworkCoreInstrumentation(options =>
                                             {
                                                 options.SetDbStatementForText = true;

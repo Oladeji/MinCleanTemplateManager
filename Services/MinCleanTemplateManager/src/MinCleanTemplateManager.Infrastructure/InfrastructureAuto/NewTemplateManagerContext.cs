@@ -17,23 +17,26 @@ namespace MinCleanTemplateManager.Infrastructure.Persistence
             // var constr = GetConnectionstringName.GetConnectionStrName(Environment.MachineName);
             var conn = _configuration.GetConnectionString(constr);
 
-                #if UseSqlServer
-                            optionsBuilder.UseSqlServer(conn!)
-                                .EnableSensitiveDataLogging()
-                                .LogTo(Console.WriteLine, LogLevel.Information);
-                #elif UsePostgreSql
-                            optionsBuilder.UseNpgsql(conn!)
-                                .EnableSensitiveDataLogging()
-                                .LogTo(Console.WriteLine, LogLevel.Information);
-                #elif UseSqlite
-                            optionsBuilder.UseSqlite(conn!)
-                                .EnableSensitiveDataLogging()
-                                .LogTo(Console.WriteLine, LogLevel.Information);
-                #else // Default to MySQL
-                            optionsBuilder.UseMySql(conn!, GeneralUtils.GetMySqlVersion())
-                                .EnableSensitiveDataLogging()
-                                .LogTo(Console.WriteLine, LogLevel.Information);
-                #endif  
+        #if (UseSqlServer)
+                  optionsBuilder.UseSqlServer(conn!)
+                  .EnableSensitiveDataLogging()
+                  .LogTo(Console.WriteLine, LogLevel.Information);
+        #endif
+        #if (UseMySql)
+                   optionsBuilder.UseMySql(conn!, GeneralUtils.GetMySqlVersion())
+                   .EnableSensitiveDataLogging()
+                   .LogTo(Console.WriteLine, LogLevel.Information);
+        #endif
+        #if (UsePostgreSql)
+                    optionsBuilder.UseNpgsql(conn!)
+                    .EnableSensitiveDataLogging()
+                    .LogTo(Console.WriteLine, LogLevel.Information);
+        #endif
+        #if( UseSqlite)
+                    optionsBuilder.UseSqlite(conn!)
+                    .EnableSensitiveDataLogging()
+                     .LogTo(Console.WriteLine, LogLevel.Information);
+        #endif
 
 
             optionsBuilder.EnableSensitiveDataLogging();
