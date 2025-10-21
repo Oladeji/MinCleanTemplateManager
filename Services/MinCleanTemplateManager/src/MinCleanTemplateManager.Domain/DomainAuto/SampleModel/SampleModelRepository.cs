@@ -6,9 +6,6 @@ namespace MinCleanTemplateManager.Domain.Entities
     {
         private SampleModel() { }
         public string SampleModelName { get; init; } = string.Empty;
-        // private  List <Model> _Models { get;  set;}  = new List<Model>();
-        // public  IReadOnlyCollection<Model> Models => _Models;
-        // public Guid GuidId    { get; init; } 
 
         public static SampleModel Create(string SampleModelName, Guid guidId)
         {

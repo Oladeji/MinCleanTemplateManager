@@ -1,6 +1,5 @@
 ﻿using MinCleanTemplateManager.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
-
 using LanguageExt;
 
 using MinCleanTemplateManager.Application.CQRS.SampleModel.Commands;

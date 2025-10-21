@@ -1,5 +1,5 @@
 ﻿using CodeGeneratorAttributesLibrary;
-using DomainBase;
+
 
 namespace MinCleanTemplateManager.BaseModels.Entities
 {

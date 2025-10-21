@@ -82,11 +82,12 @@
     }
     public static class APINames
     {
-        public const string RegistrationManagerAPI = "RegistrationManagerAPI";
-        public const string ProductManagerAPI = "ProductManagerAPI";
-        public const string ModelManagerAPI = "ModelManagerAPI";
-        public const string AuthAPI = "AuthAPI";
-        public const string CompressionTesterAPI = "CompressionTesterAPI";
+        //public const string RegistrationManagerAPI = "RegistrationManagerAPI";
+        //public const string ProductManagerAPI = "ProductManagerAPI";
+        //public const string ModelManagerAPI = "ModelManagerAPI";
+        //public const string AuthAPI = "AuthAPI";
+        //public const string CompressionTesterAPI = "CompressionTesterAPI";
+        public const string MinCleanTemplateManagerAPI = "MinCleanTemplateManagerAPI";
 
     }
 

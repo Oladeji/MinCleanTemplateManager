@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36212.18
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11111.16 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -10,22 +10,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E0021C03-61E9-46EA-9941-698B5775A29F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MinCleanTemplateManager", "MinCleanTemplateManager", "{9BF6A061-B90F-4589-9F72-462AAC01CB54}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedLibrary", "SharedLibrary", "{03299CD6-C9EE-4C68-8ADB-003CB9A3B6E4}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CQRSHelper", "CQRSHelper", "{FEE8C10E-BC9E-4AA8-A54D-7E92EB85891C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainUtils", "DomainUtils", "{3B16B4D1-4EF1-46E3-8AD0-D45379983C44}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RepositoryHelper", "RepositoryHelper", "{877B402A-18B9-44C8-B9DB-951D365880D4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRSHelper", "Services\SharedLibrary\CQRSHelper\CQRSHelper.csproj", "{A332506D-7006-1E56-86B6-CA1DEB8F5F1C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainUtils", "Services\SharedLibrary\DomainUtils\DomainUtils.csproj", "{03FD8B61-C07F-0EC6-BABE-87817976189B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryHelper", "Services\SharedLibrary\RepositoryHelper\RepositoryHelper.csproj", "{D8214D6F-26FE-B1F6-2037-6A3FB12F07EF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinCleanTemplateManager.Api", "Services\MinCleanTemplateManager\src\MinCleanTemplate.Api\MinCleanTemplateManager.Api.csproj", "{733B2916-63AB-BBD2-BEB7-92AA4A51BF01}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinCleanTemplateManager.Application", "Services\MinCleanTemplateManager\src\MinCleanTemplateManager.Application\MinCleanTemplateManager.Application.csproj", "{210C243D-62B9-1373-54F3-DF74D4193286}"
 EndProject
@@ -51,24 +35,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinCleanTemplateManager.Inf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinCleanTemplateManager.Integration.Tests", "Services\MinCleanTemplateManager\tests\MinCleanTemplateManager.Integration.Tests\MinCleanTemplateManager.Integration.Tests.csproj", "{B15B161D-BF3A-FF96-FA53-34D96AFF7A2C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GlobalConstants", "GlobalConstants", "{4C3B20EE-4D2F-4FFE-AB82-95C509E27C23}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\AppFunctionNames.cs = ..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\AppFunctionNames.cs
-		..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\AppUserInfo.cs = ..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\AppUserInfo.cs
-		..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\AuthUserInfoProvider.cs = ..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\AuthUserInfoProvider.cs
-		..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\EitherToActionResult.cs = ..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\EitherToActionResult.cs
-		..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\EitherToIResultExtensions.cs = ..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\EitherToIResultExtensions.cs
-		..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\GetMySqlVersion.cs = ..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\GetMySqlVersion.cs
-		..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\GlobalConstants.cs = ..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\GlobalConstants.cs
-		..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\GlobalConstants.csproj = ..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\GlobalConstants.csproj
-		..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\GlobalExceptionHandler.cs = ..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\GlobalExceptionHandler.cs
-		..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\JwtConfig.cs = ..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\JwtConfig.cs
-		..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\MassfusionPolicies.cs = ..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\MassfusionPolicies.cs
-		..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\TheBaseController.cs = ..\..\MASSFUSION20\BACKENDS\MassfusionAPIManager\Services\GeneralLibrary\src\GlobalConstants\TheBaseController.cs
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalConstants", "Services\SharedLibrary\GlobalConstants\GlobalConstants.csproj", "{754B8192-F89B-4A20-4CB9-CE1924FC750D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".template.config", ".template.config", "{76A6F351-79C4-4F8E-8385-13B3C6CF0187}"
@@ -76,28 +42,37 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".template.config", ".templa
 		.template.config\template.json = .template.config\template.json
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinCleanTemplateManager.Api", "Services\MinCleanTemplateManager\src\MinCleanTemplateManager.Api\MinCleanTemplateManager.Api.csproj", "{0651F12A-49FC-D4F8-1DA5-3FB50758E5D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dlls", "Dlls", "{CC4EB7D9-E28B-419F-A159-CC011A2BC73C}"
+	ProjectSection(SolutionItems) = preProject
+		Services\Dlls\CodeGeneratorAttributesLibrary.dll = Services\Dlls\CodeGeneratorAttributesLibrary.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GeneralLibrary", "GeneralLibrary", "{EE9AF829-A2B9-45A7-A77C-D9B55A1F9C39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B8529815-4ED8-4A29-BC1B-3DDE7893C75D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportGeneratorLib", "Services\GeneralLibrary\src\BarcodeReportGenerator\ReportGeneratorLib.csproj", "{DB5F8992-FF53-5547-532A-6D4995FAEBF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryHelper", "Services\GeneralLibrary\src\ConnectionStringHelper\RepositoryHelper.csproj", "{EC582962-5334-F5AD-1326-2621D1ADDAD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRSHelper", "Services\GeneralLibrary\src\CQRSHelper\CQRSHelper.csproj", "{02F3D224-78D9-C5AE-ADBE-F20CE1CD5E53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainUtils", "Services\GeneralLibrary\src\DomainUtils\DomainUtils.csproj", "{3B4B7160-E052-7DA2-E0BB-38C1BC6157ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalConstants", "Services\GeneralLibrary\src\GlobalConstants\GlobalConstants.csproj", "{19050D5A-A83F-4D78-2E5B-222FF6206E9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpQuery", "Services\GeneralLibrary\src\HttpQuery\HttpQuery.csproj", "{47964D87-A592-78DF-203A-05B002A527F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailSenderLib", "Services\GeneralLibrary\src\MailSenderLib\MailSenderLib.csproj", "{D42470E1-6C02-4127-B4BD-1C9610F56E98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A332506D-7006-1E56-86B6-CA1DEB8F5F1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A332506D-7006-1E56-86B6-CA1DEB8F5F1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A332506D-7006-1E56-86B6-CA1DEB8F5F1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A332506D-7006-1E56-86B6-CA1DEB8F5F1C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{03FD8B61-C07F-0EC6-BABE-87817976189B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03FD8B61-C07F-0EC6-BABE-87817976189B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03FD8B61-C07F-0EC6-BABE-87817976189B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03FD8B61-C07F-0EC6-BABE-87817976189B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D8214D6F-26FE-B1F6-2037-6A3FB12F07EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8214D6F-26FE-B1F6-2037-6A3FB12F07EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8214D6F-26FE-B1F6-2037-6A3FB12F07EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8214D6F-26FE-B1F6-2037-6A3FB12F07EF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{733B2916-63AB-BBD2-BEB7-92AA4A51BF01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{733B2916-63AB-BBD2-BEB7-92AA4A51BF01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{733B2916-63AB-BBD2-BEB7-92AA4A51BF01}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{733B2916-63AB-BBD2-BEB7-92AA4A51BF01}.Release|Any CPU.Build.0 = Release|Any CPU
 		{210C243D-62B9-1373-54F3-DF74D4193286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{210C243D-62B9-1373-54F3-DF74D4193286}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{210C243D-62B9-1373-54F3-DF74D4193286}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -146,10 +121,38 @@ Global
 		{B15B161D-BF3A-FF96-FA53-34D96AFF7A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B15B161D-BF3A-FF96-FA53-34D96AFF7A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B15B161D-BF3A-FF96-FA53-34D96AFF7A2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{754B8192-F89B-4A20-4CB9-CE1924FC750D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{754B8192-F89B-4A20-4CB9-CE1924FC750D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{754B8192-F89B-4A20-4CB9-CE1924FC750D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{754B8192-F89B-4A20-4CB9-CE1924FC750D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0651F12A-49FC-D4F8-1DA5-3FB50758E5D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0651F12A-49FC-D4F8-1DA5-3FB50758E5D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0651F12A-49FC-D4F8-1DA5-3FB50758E5D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0651F12A-49FC-D4F8-1DA5-3FB50758E5D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB5F8992-FF53-5547-532A-6D4995FAEBF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB5F8992-FF53-5547-532A-6D4995FAEBF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB5F8992-FF53-5547-532A-6D4995FAEBF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB5F8992-FF53-5547-532A-6D4995FAEBF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC582962-5334-F5AD-1326-2621D1ADDAD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC582962-5334-F5AD-1326-2621D1ADDAD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC582962-5334-F5AD-1326-2621D1ADDAD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC582962-5334-F5AD-1326-2621D1ADDAD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02F3D224-78D9-C5AE-ADBE-F20CE1CD5E53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02F3D224-78D9-C5AE-ADBE-F20CE1CD5E53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02F3D224-78D9-C5AE-ADBE-F20CE1CD5E53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02F3D224-78D9-C5AE-ADBE-F20CE1CD5E53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B4B7160-E052-7DA2-E0BB-38C1BC6157ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B4B7160-E052-7DA2-E0BB-38C1BC6157ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B4B7160-E052-7DA2-E0BB-38C1BC6157ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B4B7160-E052-7DA2-E0BB-38C1BC6157ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19050D5A-A83F-4D78-2E5B-222FF6206E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19050D5A-A83F-4D78-2E5B-222FF6206E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19050D5A-A83F-4D78-2E5B-222FF6206E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19050D5A-A83F-4D78-2E5B-222FF6206E9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47964D87-A592-78DF-203A-05B002A527F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47964D87-A592-78DF-203A-05B002A527F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47964D87-A592-78DF-203A-05B002A527F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47964D87-A592-78DF-203A-05B002A527F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D42470E1-6C02-4127-B4BD-1C9610F56E98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D42470E1-6C02-4127-B4BD-1C9610F56E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D42470E1-6C02-4127-B4BD-1C9610F56E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D42470E1-6C02-4127-B4BD-1C9610F56E98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -158,14 +161,6 @@ Global
 		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {9BF6A061-B90F-4589-9F72-462AAC01CB54}
 		{5CFB7062-6CE8-4A6F-8A83-B247DA04E54D} = {9BF6A061-B90F-4589-9F72-462AAC01CB54}
 		{9BF6A061-B90F-4589-9F72-462AAC01CB54} = {E0021C03-61E9-46EA-9941-698B5775A29F}
-		{03299CD6-C9EE-4C68-8ADB-003CB9A3B6E4} = {E0021C03-61E9-46EA-9941-698B5775A29F}
-		{FEE8C10E-BC9E-4AA8-A54D-7E92EB85891C} = {03299CD6-C9EE-4C68-8ADB-003CB9A3B6E4}
-		{3B16B4D1-4EF1-46E3-8AD0-D45379983C44} = {03299CD6-C9EE-4C68-8ADB-003CB9A3B6E4}
-		{877B402A-18B9-44C8-B9DB-951D365880D4} = {03299CD6-C9EE-4C68-8ADB-003CB9A3B6E4}
-		{A332506D-7006-1E56-86B6-CA1DEB8F5F1C} = {FEE8C10E-BC9E-4AA8-A54D-7E92EB85891C}
-		{03FD8B61-C07F-0EC6-BABE-87817976189B} = {3B16B4D1-4EF1-46E3-8AD0-D45379983C44}
-		{D8214D6F-26FE-B1F6-2037-6A3FB12F07EF} = {877B402A-18B9-44C8-B9DB-951D365880D4}
-		{733B2916-63AB-BBD2-BEB7-92AA4A51BF01} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{210C243D-62B9-1373-54F3-DF74D4193286} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{B26EE5B9-172D-0681-C57F-D0AE09687E75} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{14E5508E-021B-2325-048B-7EC274F4A61F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
@@ -178,8 +173,17 @@ Global
 		{8627FDD4-259B-B4E7-6967-77F3AEE70EDE} = {5CFB7062-6CE8-4A6F-8A83-B247DA04E54D}
 		{E7A12697-F33C-6CFC-29C7-CE9578BF637D} = {5CFB7062-6CE8-4A6F-8A83-B247DA04E54D}
 		{B15B161D-BF3A-FF96-FA53-34D96AFF7A2C} = {5CFB7062-6CE8-4A6F-8A83-B247DA04E54D}
-		{4C3B20EE-4D2F-4FFE-AB82-95C509E27C23} = {03299CD6-C9EE-4C68-8ADB-003CB9A3B6E4}
-		{754B8192-F89B-4A20-4CB9-CE1924FC750D} = {4C3B20EE-4D2F-4FFE-AB82-95C509E27C23}
+		{0651F12A-49FC-D4F8-1DA5-3FB50758E5D3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{CC4EB7D9-E28B-419F-A159-CC011A2BC73C} = {E0021C03-61E9-46EA-9941-698B5775A29F}
+		{EE9AF829-A2B9-45A7-A77C-D9B55A1F9C39} = {E0021C03-61E9-46EA-9941-698B5775A29F}
+		{B8529815-4ED8-4A29-BC1B-3DDE7893C75D} = {EE9AF829-A2B9-45A7-A77C-D9B55A1F9C39}
+		{DB5F8992-FF53-5547-532A-6D4995FAEBF3} = {B8529815-4ED8-4A29-BC1B-3DDE7893C75D}
+		{EC582962-5334-F5AD-1326-2621D1ADDAD7} = {B8529815-4ED8-4A29-BC1B-3DDE7893C75D}
+		{02F3D224-78D9-C5AE-ADBE-F20CE1CD5E53} = {B8529815-4ED8-4A29-BC1B-3DDE7893C75D}
+		{3B4B7160-E052-7DA2-E0BB-38C1BC6157ED} = {B8529815-4ED8-4A29-BC1B-3DDE7893C75D}
+		{19050D5A-A83F-4D78-2E5B-222FF6206E9F} = {B8529815-4ED8-4A29-BC1B-3DDE7893C75D}
+		{47964D87-A592-78DF-203A-05B002A527F2} = {B8529815-4ED8-4A29-BC1B-3DDE7893C75D}
+		{D42470E1-6C02-4127-B4BD-1C9610F56E98} = {B8529815-4ED8-4A29-BC1B-3DDE7893C75D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D14B2335-E89B-4167-98A8-DC77DD7B4D2D}

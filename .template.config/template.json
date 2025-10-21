@@ -154,7 +154,11 @@
         "**/[Oo]bj/**",
         "**/*.filelist",
         "**/*.user",
-        "**/*.lock.json"
+        "**/*.lock.json",
+        "README.md",
+        ".vscode/**",
+        "*.sln.DotSettings",
+        ".idea/**"
       ],
       "modifiers": [
         {

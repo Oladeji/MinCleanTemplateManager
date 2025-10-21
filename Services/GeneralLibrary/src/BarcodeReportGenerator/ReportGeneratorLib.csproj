@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data.OpenTelemetry" />
+    <PackageReference Include="PdfSharpCore" />
+    <PackageReference Include="ReportViewerCore.NETCore" />
+    <PackageReference Include="Serilog.Sinks.OpenTelemetry" />
+    <PackageReference Include="System.Formats.Asn1" />
+    <PackageReference Include="System.Security.Cryptography.Pkcs" />
+    <PackageReference Include="ZXing.Net" />
+    <PackageReference Include="ZXing.Net.Bindings.Windows.Compatibility" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GlobalConstants\GlobalConstants.csproj" />
+  </ItemGroup>
+
+
+
+</Project>

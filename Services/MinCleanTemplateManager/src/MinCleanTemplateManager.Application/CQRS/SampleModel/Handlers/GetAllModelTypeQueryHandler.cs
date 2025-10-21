@@ -22,13 +22,10 @@ namespace MinCleanTemplateManager.Application.CQRS
 
         public async Task<Either<GeneralFailure, IEnumerable<SampleModelResponseDTO>>> Handle(GetAllSampleModelQuery request, CancellationToken cancellationToken)
         {
-            return (await _SampleModelRepository
-         //.GetAllAsync(s => true, new List<string>() { "Models" }, null, cancellationToken))
-         .GetAllAsync(s => true, null, null,null, cancellationToken))
-
-       .Map(task => task
-// .Select(result => new SampleModelResponseDTO(result.GuidId, result.SampleModelName, ConvertTo(result.Models))));
-.Select(result => new SampleModelResponseDTO(result.GuidId, result.SampleModelName, null)));
+            return (await _SampleModelRepository    
+           .GetAllAsync(s => true, null, null,null, cancellationToken))
+           .Map(task => task
+          .Select(result => new SampleModelResponseDTO(result.GuidId, result.SampleModelName, null)));
         }
     }
 }

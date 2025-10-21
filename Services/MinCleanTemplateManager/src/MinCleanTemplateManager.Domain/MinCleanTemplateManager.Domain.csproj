@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SharedLibrary\DomainUtils\DomainUtils.csproj" />
+    <Folder Include="Constants\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\GeneralLibrary\src\DomainUtils\DomainUtils.csproj" />
   </ItemGroup>
 
 </Project>

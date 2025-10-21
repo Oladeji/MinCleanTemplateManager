@@ -4,15 +4,12 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	 
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SharedLibrary\DomainUtils\DomainUtils.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="CodeGeneratorAttributesLibrary">
-      <HintPath>..\..\..\..\..\SolutionCodeGenerator\src\CodeGeneratorAttributesLibrary\obj\Release\net8.0\CodeGeneratorAttributesLibrary.dll</HintPath>
+      <HintPath>..\..\..\Dlls\CodeGeneratorAttributesLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 

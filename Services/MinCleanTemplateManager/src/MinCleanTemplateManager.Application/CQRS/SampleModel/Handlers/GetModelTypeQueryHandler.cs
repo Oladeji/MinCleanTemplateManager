@@ -23,17 +23,14 @@ namespace MinCleanTemplateManager.Application.CQRS
 
         public async Task<Either<GeneralFailure, SampleModelResponseDTO>> Handle(GetSampleModelQuery request, CancellationToken cancellationToken)
         {
-            //  List<string> includes = new List<string>() { "Models" };
+           
             return (await _SampleModelRepository
                     .GetMatch(s => (s.SampleModelName == request.RequestSampleModelDTO.SampleModelName), null, cancellationToken))
                     .Map((result) => new SampleModelResponseDTO(result.GuidId, result.SampleModelName, null));
-            //.Map((result) => new SampleModelResponseDTO(result.GuidId, result.SampleModelName, convertToModelDto(result.Models)));
+         
 
         }
 
-        private ICollection<ModelResponseDTO> convertToModelDto(IEnumerable<Domain.Entities.Model> models)
-        {
-            return models.Select(x => new ModelResponseDTO(x.GuidId, x.ModelName, x.SampleModelName, null)).ToList();
-        }
+   
     }
 }

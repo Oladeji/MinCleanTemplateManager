@@ -25,12 +25,9 @@ namespace MinCleanTemplateManager.Application.CQRS
             return (await _SampleModelRepository
                             .GetMatch(s => s.GuidId == request.RequestSampleModelDTO.GuidId, null, cancellationToken))
                             .Map((result) => new SampleModelResponseDTO(result.GuidId, result.SampleModelName, null));
-            //.Map((result) => new SampleModelResponseDTO(result.GuidId, result.SampleModelName, convertToModelDto(result.Models)));
+     
         }
 
-        private ICollection<ModelResponseDTO> convertToModelDto(IReadOnlyCollection<Domain.Entities.Model> models)
-        {
-            return models.Select(x => new ModelResponseDTO(x.GuidId, x.ModelName, x.SampleModelName, null)).ToList();
-        }
+      
     }
 }
