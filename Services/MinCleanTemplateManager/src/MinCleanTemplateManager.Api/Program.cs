@@ -80,7 +80,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseSerilogRequestLogging();
-app.RegisterEndpoints();
+app.RegisterMinCleanTemplateManagerEndpoints();
 app.UseCors(CorsConstants.Cors_Policy);
 app.UseExceptionHandler();
 app.UseHttpsRedirection();

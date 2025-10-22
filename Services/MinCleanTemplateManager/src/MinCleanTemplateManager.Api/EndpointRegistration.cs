@@ -4,7 +4,7 @@ namespace MinCleanTemplateManager.Api;
 
 public static class EndpointRegistration
 {
-    public static void RegisterEndpoints(this WebApplication app)
+    public static void RegisterMinCleanTemplateManagerEndpoints(this WebApplication app)
     {
         app.MapSampleModelEndpoint();
 
